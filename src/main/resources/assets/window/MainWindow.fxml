@@ -32,7 +32,7 @@
             <ColumnConstraints hgrow="ALWAYS"/>
             <ColumnConstraints/>
         </columnConstraints>
-        <Label fx:id="universityNameLabel" text="Херсонский национальний технический университет" GridPane.columnIndex="0">
+        <Label fx:id="universityNameLabel" text="Kherson National Technical University" GridPane.columnIndex="0">
             <GridPane.margin>
                 <Insets>
                     <top>5</top>
