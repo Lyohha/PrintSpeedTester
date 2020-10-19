@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ua.lyohha.window.MainWindow"
+          prefHeight="630.0" prefWidth="800.0"
+          fx:id="mainGridPane">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+        <RowConstraints/>
+    </rowConstraints>
+    <GridPane GridPane.rowIndex="0" fx:id="frameGridPane">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS"/>
+        </rowConstraints>
+    </GridPane>
+    <GridPane GridPane.rowIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS"/>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <Label fx:id="universityNameLabel" text="Херсонский национальний технический университет" GridPane.columnIndex="0">
+            <GridPane.margin>
+                <Insets>
+                    <top>5</top>
+                    <bottom>5</bottom>
+                    <left>10</left>
+                </Insets>
+            </GridPane.margin>
+        </Label>
+        <StackPane GridPane.columnIndex="1">
+            <GridPane.margin>
+                <Insets>
+                    <top>5</top>
+                    <bottom>5</bottom>
+                    <right>10</right>
+                </Insets>
+            </GridPane.margin>
+            <Label fx:id="authorNameLabel" text=" " alignment="BASELINE_RIGHT" textAlignment="RIGHT"/>
+        </StackPane>
+    </GridPane>
+</GridPane>
