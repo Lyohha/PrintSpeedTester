@@ -7,6 +7,17 @@ version '0.0.1'
 
 sourceCompatibility = 1.8
 
+sourceSets {
+    main {
+        resources {
+            srcDir "src/resources"
+        }
+        java {
+            srcDir "src/java"
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }

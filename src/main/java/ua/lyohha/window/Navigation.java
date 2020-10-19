@@ -5,13 +5,11 @@ import javafx.scene.Parent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import ua.lyohha.page.Page;
-import ua.lyohha.themes.ThemeChangeEvent;
-import ua.lyohha.themes.Themes;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Navigation implements ThemeChangeEvent {
+public class Navigation{
 
     private List<Parent> pages = new ArrayList<>();
     private List<Page> oPages = new ArrayList<>();
@@ -19,7 +17,6 @@ public class Navigation implements ThemeChangeEvent {
 
     public Navigation(Pane pane) {
 
-        Themes.addEvent(this);
         this.pane = pane;
     }
 
@@ -83,17 +80,6 @@ public class Navigation implements ThemeChangeEvent {
             oPages.clear();
             pages.add(parent);
             oPages.add(page);
-        }
-    }
-
-    @Override
-    public void onThemeChange() {
-        for (int i = 0; i < pages.size(); i++) {
-            pages.get(i).getStylesheets().clear();
-            if (oPages.get(i).getStyleClass() != null)
-                pages.get(i).getStylesheets()
-                        .add(oPages.get(i).getClass()
-                                .getResource(oPages.get(i).getStyleClass()).toExternalForm());
         }
     }
 }

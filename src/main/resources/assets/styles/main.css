@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'UbuntuMono-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/UbuntuMono-R.ttf");
+}
+
+.vbox-view {
+    -fx-background-color: "#F0F0F0";
+}
+
+.open-button {
+    -fx-background-color: Transparent;
+    -fx-border-insets: 0 10 0 0;
+    -fx-font-size: 16;
+    -fx-text-fill: "#282828";
+    -fx-background-radius: 0px;
+}
+
+.open-button:hover {
+    -fx-background-color: "#D3D3D3";
+}
+
+.program-name-container {
+    -fx-font-size: 28;
+    -fx-font-family: 'UbuntuMono-Regular';
+}
+
+.text-accepted {
+    -fx-background-color: "#00FF00";
+    -fx-font-family: 'UbuntuMono-Regular';
+}
+
+.text-error {
+    -fx-background-color: "#FF0000";
+    -fx-font-family: 'UbuntuMono-Regular';
+}
+
+.text-selected {
+    -fx-background-color: "#0000FF";
+    -fx-font-family: 'UbuntuMono-Regular';
+}
