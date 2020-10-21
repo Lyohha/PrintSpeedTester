@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ua.lyohha.page.testing.TestingPage"
+          prefHeight="630.0" prefWidth="800.0"
+          fx:id="mainGridPane">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+        <ColumnConstraints prefWidth="200" minWidth="200"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <ScrollPane GridPane.rowIndex="0" fx:id="textPane">
+        <VBox fx:id="textVBox" styleClass="text-container">
+            <padding>
+                <Insets>
+                    <left>10</left>
+                    <bottom>5</bottom>
+                    <top>5</top>
+                </Insets>
+            </padding>
+        </VBox>
+    </ScrollPane>
+    <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="testing-info">
+        <HBox>
+            <Label text="File:" prefWidth="50" />
+            <Label text="none"/>
+        </HBox>
+        <HBox>
+            <Label text="Time:" prefWidth="50" />
+            <Label text="00:00" />
+        </HBox>
+        <HBox>
+            <Label text="SPM:" prefWidth="50" />
+            <Label text="0" />
+        </HBox>
+        <HBox>
+            <Label text="WPM:" prefWidth="50" />
+            <Label text="0"/>
+        </HBox>
+
+        <HBox>
+            <CheckBox text="Ignore Errors"/>
+        </HBox>
+
+    </VBox>
+</GridPane>

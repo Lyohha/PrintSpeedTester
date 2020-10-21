@@ -6,18 +6,36 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="ua.lyohha.page.main.MainPage"
       prefHeight="600.0" prefWidth="800.0"
       fx:id="mainVBox" alignment="CENTER"
       styleClass="vbox-view">
-    <HBox styleClass="program-name-container" prefWidth="300" alignment="CENTER">
-        <Label styleClass="text-accepted">Print </Label>
-        <Label styleClass="text-accepted">Sp</Label>
-        <Label styleClass="text-error">e</Label>
+    <HBox styleClass="program-name-container" prefWidth="300" alignment="TOP_CENTER">
+        <Label styleClass="text-accepted">Print Sp</Label>
+        <Label styleClass="text-error" >e</Label>
         <Label styleClass="text-selected">e</Label>
         <Label>d Tester</Label>
     </HBox>
-    <Button fx:id="openButton" text="Open File" styleClass="open-button" prefWidth="300" onAction="#openButtonClick"/>
+
+    <HBox styleClass="open-file-container" prefWidth="300" alignment="TOP_CENTER">
+        <VBox.margin>
+            <Insets>
+                <top>30</top>
+            </Insets>
+        </VBox.margin>
+        <Label>For start open file</Label>
+
+    </HBox>
+
+    <Button fx:id="openButton" text="Open File" styleClass="open-button" prefWidth="300" onAction="#openButtonClick">
+        <VBox.margin>
+            <Insets>
+                <top>5</top>
+            </Insets>
+        </VBox.margin>
+
+    </Button>
 </VBox>

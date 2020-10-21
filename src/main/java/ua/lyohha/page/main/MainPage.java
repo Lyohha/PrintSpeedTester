@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import ua.lyohha.page.Page;
+import ua.lyohha.page.testing.TestingPage;
 
 import java.awt.*;
 
@@ -34,9 +35,14 @@ public class MainPage extends Page {
 
     }
 
+    @Override
+    public void setParams(Object... params) {
+
+    }
+
     public void openButtonClick(ActionEvent actionEvent) {
 
-        FileDialog fileDialog = new FileDialog((Frame)null, "Open File");
+        /*FileDialog fileDialog = new FileDialog((Frame)null, "Open File");
         fileDialog.setMode(FileDialog.LOAD);
         fileDialog.setVisible(true);
 
@@ -45,6 +51,8 @@ public class MainPage extends Page {
         // file
         System.out.println(file);
         // path
-        System.out.println(fileDialog.getDirectory());
+        System.out.println(fileDialog.getDirectory());*/
+
+        this.navigation.navigateTo(TestingPage.class);
     }
 }

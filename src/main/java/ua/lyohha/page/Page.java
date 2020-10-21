@@ -13,4 +13,6 @@ public abstract class Page {
     public abstract String getPage();
 
     public abstract void initializeComponent();
+
+    public abstract void setParams(Object... params);
 }

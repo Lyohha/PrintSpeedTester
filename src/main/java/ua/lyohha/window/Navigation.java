@@ -20,7 +20,7 @@ public class Navigation{
         this.pane = pane;
     }
 
-    public Object navigateTo(Class c) {
+    public Object navigateTo(Class c, Object... params) {
         Object o = null;
         try {
             o = c.newInstance();
@@ -51,6 +51,7 @@ public class Navigation{
             oPages.add((Page) o);
             ((Page) loader.getController()).navigation = this;
             ((Page) loader.getController()).initializeComponent();
+            ((Page) loader.getController()).setParams(params);
             updateView();
             return loader.getController();
         }

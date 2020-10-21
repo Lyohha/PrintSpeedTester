@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'UbuntuMono-Regular';
+    font-family: UbuntuMono;
     font-style: normal;
     font-weight: 400;
     src: url("../fonts/UbuntuMono-R.ttf");
@@ -7,12 +7,13 @@
 
 .vbox-view {
     -fx-background-color: "#F0F0F0";
+    -fx-margin: 0 0 30px 0;
 }
 
 .open-button {
     -fx-background-color: Transparent;
     -fx-border-insets: 0 10 0 0;
-    -fx-font-size: 16;
+    -fx-font-size: 20;
     -fx-text-fill: "#282828";
     -fx-background-radius: 0px;
 }
@@ -23,20 +24,23 @@
 
 .program-name-container {
     -fx-font-size: 28;
-    -fx-font-family: 'UbuntuMono-Regular';
+    -fx-font-family: 'Ubuntu Mono';
 }
 
 .text-accepted {
-    -fx-background-color: "#00FF00";
-    -fx-font-family: 'UbuntuMono-Regular';
+    -fx-background-color: "#71d980";
 }
 
 .text-error {
-    -fx-background-color: "#FF0000";
-    -fx-font-family: 'UbuntuMono-Regular';
+    -fx-background-color: "#f2211d";
 }
 
 .text-selected {
-    -fx-background-color: "#0000FF";
-    -fx-font-family: 'UbuntuMono-Regular';
+    -fx-background-color: "#4058f5";
+    -fx-padding: 0 0 10px 0;
+    -fx-text-alignment: top;
+}
+
+.open-file-container {
+    -fx-font-size: 16;
 }

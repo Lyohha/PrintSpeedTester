@@ -1,0 +1,34 @@
+@font-face {
+    font-family: UbuntuMono;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/UbuntuMono-R.ttf");
+}
+
+.testing-info {
+    -fx-font-size: 18;
+    -fx-font-family: 'Ubuntu Mono';
+}
+
+.testing-info > HBox {
+    -fx-padding: 20px 0 0 0;
+}
+
+.text-container {
+    -fx-font-size: 28;
+    -fx-font-family: 'Ubuntu Mono';
+}
+
+.text-accepted {
+    -fx-background-color: "#71d980";
+}
+
+.text-error {
+    -fx-background-color: "#f2211d";
+}
+
+.text-selected {
+    -fx-background-color: "#4058f5";
+    -fx-padding: 0 0 10px 0;
+    -fx-text-alignment: top;
+}
