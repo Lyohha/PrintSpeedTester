@@ -33,23 +33,23 @@
     <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="testing-info">
         <HBox>
             <Label text="File:" prefWidth="50" />
-            <Label text="none"/>
+            <Label fx:id="fileField" text="none"/>
         </HBox>
         <HBox>
             <Label text="Time:" prefWidth="50" />
-            <Label text="00:00" />
+            <Label fx:id="timeField" text="00:00" />
         </HBox>
         <HBox>
             <Label text="SPM:" prefWidth="50" />
-            <Label text="0" />
+            <Label fx:id="spmField" text="0" />
         </HBox>
         <HBox>
             <Label text="WPM:" prefWidth="50" />
-            <Label text="0"/>
+            <Label fx:id="wpmField" text="0"/>
         </HBox>
 
         <HBox>
-            <CheckBox text="Ignore Errors"/>
+            <CheckBox fx:id="ignoreErrorCB" text="Ignore Errors"/>
         </HBox>
 
     </VBox>

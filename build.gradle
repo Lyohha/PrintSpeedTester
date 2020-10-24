@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'edu.sc.seis.launch4j' version '2.4.6'
 }
 
 group 'ua.lyohha'
-version '0.0.1'
+version '1.0'
 
 sourceCompatibility = 1.8
 
@@ -18,10 +19,22 @@ sourceSets {
     }
 }
 
+launch4j {
+    mainClassName = 'ua.lyohha.Main'
+}
+
+jar {
+    manifest{
+        attributes 'Main-Class': 'ua.lyohha.Main'
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.checkerframework:checker:2.1.12'
+    compile 'edu.sc.seis.gradle:launch4j:2.4.6'
 }

@@ -20,7 +20,7 @@
         <Label>d Tester</Label>
     </HBox>
 
-    <HBox styleClass="open-file-container" prefWidth="300" alignment="TOP_CENTER">
+    <!--<HBox styleClass="open-file-container" prefWidth="300" alignment="TOP_CENTER">
         <VBox.margin>
             <Insets>
                 <top>30</top>
@@ -28,14 +28,20 @@
         </VBox.margin>
         <Label>For start open file</Label>
 
-    </HBox>
+    </HBox>-->
 
     <Button fx:id="openButton" text="Open File" styleClass="open-button" prefWidth="300" onAction="#openButtonClick">
+        <VBox.margin>
+            <Insets>
+                <top>30</top>
+            </Insets>
+        </VBox.margin>
+    </Button>
+    <Button fx:id="exitButton" text="Exit" styleClass="open-button" prefWidth="300" onAction="#exitButtonClick">
         <VBox.margin>
             <Insets>
                 <top>5</top>
             </Insets>
         </VBox.margin>
-
     </Button>
 </VBox>

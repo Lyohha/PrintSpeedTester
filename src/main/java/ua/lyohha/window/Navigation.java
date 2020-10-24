@@ -50,9 +50,10 @@ public class Navigation{
             pages.add(pageContent);
             oPages.add((Page) o);
             ((Page) loader.getController()).navigation = this;
-            ((Page) loader.getController()).initializeComponent();
             ((Page) loader.getController()).setParams(params);
+
             updateView();
+            ((Page) loader.getController()).initializeComponent();
             return loader.getController();
         }
         return null;

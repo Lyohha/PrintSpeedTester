@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ua.lyohha.page.result.ResultPage"
+      prefHeight="600.0" prefWidth="800.0"
+      fx:id="mainVBox" alignment="CENTER"
+      styleClass="vbox-view">
+    <HBox styleClass="program-name-container" prefWidth="300" alignment="TOP_CENTER">
+        <Label styleClass="text-accepted">Print Sp</Label>
+        <Label styleClass="text-error" >e</Label>
+        <Label styleClass="text-selected">e</Label>
+        <Label>d Tester</Label>
+    </HBox>
+    <HBox styleClass="result-container" prefWidth="350" alignment="TOP_CENTER">
+        <VBox.margin>
+            <Insets>
+                <top>30</top>
+            </Insets>
+        </VBox.margin>
+        <VBox prefWidth="300" alignment="TOP_CENTER">
+            <Label>Result of test:</Label>
+            <HBox>
+                <Label text="File:" prefWidth="150" />
+                <Label fx:id="fileField" text="none"/>
+            </HBox>
+            <HBox>
+                <Label text="Time:" prefWidth="150" />
+                <Label fx:id="timeField" text="00:00" />
+            </HBox>
+            <HBox>
+                <Label text="Count Symbols:" prefWidth="150" />
+                <Label fx:id="countSymbolsField" text="0" />
+            </HBox>
+            <HBox>
+                <Label text="Count Words:" prefWidth="150" />
+                <Label fx:id="countWordsField" text="0"/>
+            </HBox>
+            <HBox>
+                <Label text="SPM:" prefWidth="150" />
+                <Label fx:id="spmField" text="0" />
+            </HBox>
+            <HBox>
+                <Label text="WPM:" prefWidth="150" />
+                <Label fx:id="wpmField" text="0"/>
+            </HBox>
+            <HBox>
+                <Label text="Accuracy:" prefWidth="150" />
+                <Label fx:id="accuracyField" text="0"/>
+            </HBox>
+        </VBox>
+
+    </HBox>
+
+
+    <Button fx:id="backInMenu" text="Back In Menu" styleClass="open-button" prefWidth="300" onAction="#backInMenuButtonClick">
+        <VBox.margin>
+            <Insets>
+                <top>30</top>
+            </Insets>
+        </VBox.margin>
+
+    </Button>
+</VBox>

@@ -31,7 +31,7 @@ public class MainWindow extends Application {
 
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setMinWidth(800);
+        primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(500);
         primaryStage.setTitle("Print Speed Tester");
         primaryStage.show();

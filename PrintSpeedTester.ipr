@@ -5,11 +5,12 @@
       <module name="PrintSpeedTester" target="1.8" />
       <module name="PrintSpeedTester.main" target="1.8" />
       <module name="PrintSpeedTester.test" target="1.8" />
+      <module name="PrintSpeedTester_main" target="1.8" />
+      <module name="PrintSpeedTester_test" target="1.8" />
       <module name="ua.lyohha.PrintSpeedTester.main" target="1.8" />
       <module name="ua.lyohha.PrintSpeedTester.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
@@ -32,11 +33,11 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.iml" group="PrintSpeedTester" />
       <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.main.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.test.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.main.iml" filepath="$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.test.iml" filepath="$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester_main.iml" filepath="$PROJECT_DIR$/PrintSpeedTester_main.iml" group="PrintSpeedTester" />
+      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester_test.iml" filepath="$PROJECT_DIR$/PrintSpeedTester_test.iml" group="PrintSpeedTester" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -63,6 +64,42 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
   <component name="libraryTable">
+    <library name="Gradle: com.thoughtworks.xstream:xstream:1.4.11.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.11.1/6c120c45a8c480bb2fea5b56502e3993ddd74fd2/xstream-1.4.11.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.11.1/daa94f599863e533410a7bfcd562c691d71edc27/xstream-1.4.11.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: commons-beanutils:commons-beanutils:1.7.0">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.7.0/5675fd96b29656504b86029551973d60fb41339b/commons-beanutils-1.7.0.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.7.0/b68c4fc66026e8c08df7fb57c7dc1e94a6ed8cbb/commons-beanutils-1.7.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: commons-logging:commons-logging:1.2">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/ecf26c7507d67782a3bbd148d170b31dfad001aa/commons-logging-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: edu.sc.seis.gradle:launch4j:2.4.6">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.sc.seis.gradle/launch4j/2.4.6/874ceddd0636b682d07f00b9baf64b70451c4c9e/launch4j-2.4.6.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/edu.sc.seis.gradle/launch4j/2.4.6/27afc00792a63b35f2be23671a045ab384d8ec5f/launch4j-2.4.6-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: junit:junit:4.12">
       <ANNOTATIONS>
         <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/externalAnnotations/junit/junit/4.12-an1/junit-4.12-an1-annotations.zip!/" />
@@ -75,6 +112,24 @@
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/a6c32b40bf3d76eca54e3c601e5d1470c86fcdfa/junit-4.12-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Gradle: net.sf.launch4j:launch4j:core:3.12">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.launch4j/launch4j/3.12/4875b6b68631a9d8c8e87cd7fc36784c7af1a873/launch4j-3.12-core.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.sf.launch4j/launch4j/3.12/49f67d301a1b548e207ed6e7b9e1ba7afe639b3/launch4j-3.12-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: org.checkerframework:checker:2.1.12">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker/2.1.12/fceccfd72efee5afcff0fcd0c36b85dd5d2de686/checker-2.1.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker/2.1.12/c24b6fb6b0a70a8135705ebf725fb4c7203057de/checker-2.1.12-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Gradle: org.hamcrest:hamcrest-core:1.3">
       <CLASSES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/" />
@@ -82,6 +137,22 @@
       <JAVADOC />
       <SOURCES>
         <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Gradle: xmlpull:xmlpull:1.1.3.1">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="Gradle: xpp3:xpp3_min:1.1.4c">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/fffe25ec1f20ec1cfdc0edd41c6e0d55bc0dbaf5/xpp3_min-1.1.4c-sources.jar!/" />
       </SOURCES>
     </library>
   </component>

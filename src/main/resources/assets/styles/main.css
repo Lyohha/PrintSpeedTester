@@ -36,9 +36,9 @@
 }
 
 .text-selected {
-    -fx-background-color: "#4058f5";
+    -fx-background-color: "#7cabf7";
     -fx-padding: 0 0 10px 0;
-    -fx-text-alignment: top;
+    /*-fx-text-alignment: top;*/
 }
 
 .open-file-container {
