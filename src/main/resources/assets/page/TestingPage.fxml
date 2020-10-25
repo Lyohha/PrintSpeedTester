@@ -51,6 +51,8 @@
         <HBox>
             <CheckBox fx:id="ignoreErrorCB" text="Ignore Errors"/>
         </HBox>
-
+        <!--<HBox>
+            <Label fx:id="scrollField" text="0"/>
+        </HBox>-->
     </VBox>
 </GridPane>

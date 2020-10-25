@@ -33,7 +33,7 @@ public class MainWindow extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(1000);
         primaryStage.setMinHeight(500);
-        primaryStage.setTitle("Print Speed Tester");
+        primaryStage.setTitle("LPrint Speed Tester");
         primaryStage.show();
     }
 }

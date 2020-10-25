@@ -70,6 +70,10 @@ public class Line {
         return items.get(index).isWordEnd();
     }
 
+    public double getHeight()
+    {
+        return hBox.getBoundsInParent().getMaxY();
+    }
 }
 
 

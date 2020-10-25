@@ -17,9 +17,11 @@ import ua.lyohha.page.result.ResultPage;
 import ua.lyohha.testing.Line;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +34,7 @@ public class TestingPage extends Page {
     public Label spmField;
     public Label wpmField;
     public CheckBox ignoreErrorCB;
+    public Label scrollField;
 
     private String styleFile = "/assets/styles/testing.css";
     private String page = "/assets/page/TestingPage.fxml";
@@ -51,6 +54,8 @@ public class TestingPage extends Page {
 
     private boolean disabledCheckBox = false;
     private boolean ignoreError = false;
+
+    private double scrollCoefficient = 0;
 
     @Override
     public Parent getParent() {
@@ -90,7 +95,11 @@ public class TestingPage extends Page {
         textPane.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                if (event.getCode() != KeyCode.UNDEFINED && event.getEventType() == KeyEvent.KEY_PRESSED)
+                System.out.println(event.toString());
+                /*if ((event.getCode() != KeyCode.UNDEFINED && event.getEventType() == KeyEvent.KEY_PRESSED) ||
+                        (event.getText().length() != 0 && event.getEventType() == KeyEvent.KEY_PRESSED))*/
+                if(event.getEventType() == KeyEvent.KEY_TYPED ||
+                        (event.getCode().getName().equals("Backspace") && event.getEventType() == KeyEvent.KEY_PRESSED))
                     onKeyPressed(event);
 
                 event.consume();
@@ -108,6 +117,8 @@ public class TestingPage extends Page {
 
         textPane.requestFocus();
         textVBox.requestFocus();
+
+
     }
 
     @Override
@@ -126,7 +137,7 @@ public class TestingPage extends Page {
         String text;
 
         try {
-            text = new String(Files.readAllBytes(Paths.get(filePath)));
+            text = new String(Files.readAllBytes(Paths.get(filePath)), StandardCharsets.UTF_8);
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
             this.navigation.navigateBack();
@@ -208,6 +219,25 @@ public class TestingPage extends Page {
             timer = new Timer();
             timerThread = new Thread(timer);
             timerThread.start();
+
+            //scrollCoefficient = (double)115 / textPane.getHeight();
+
+            //scrollCoefficient = (double)91 / textPane.getContent().getBoundsInLocal().getHeight();
+            scrollCoefficient = (lines.get(0).getHeight() - 5) / (textPane.getContent().getBoundsInLocal().getHeight() + 10 - textPane.getHeight());
+            System.out.println(scrollCoefficient);
+            System.out.println(textPane.getHeight());
+            System.out.println(textPane.getContent().getBoundsInLocal().getHeight());
+            //System.out.println(lines.get(0).getHeight());
+            System.out.println("Height");
+            for (Line item : lines) {
+                System.out.println(item.getHeight());
+            }
+            System.out.println("/Height");
+
+        } else
+        {
+            System.out.println("new Height");
+            System.out.println(textPane.getContent().getBoundsInLocal().getHeight());
         }
 
         if (!disabledCheckBox) {
@@ -216,16 +246,20 @@ public class TestingPage extends Page {
             ignoreErrorCB.setDisable(true);
         }
 
-        String symbol = event.getText();
+        //String symbol = event.getText();
+        String symbol = event.getCharacter();
 
-        if (symbol.length() == 1) {
+        //if (symbol.length() == 1) {
+        if (!event.getCode().getName().equals("Backspace")) {
             System.out.println(symbol);
-            symbol = event.getText();
+            //symbol = event.getText();
             if (symbol.equals("\r"))
                 symbol = "\n";
             if (event.isShiftDown()) {
                 if (symbol.charAt(0) == '\'')
                     symbol = "\"";
+                else if (symbol.charAt(0) == '/')
+                    symbol = "?";
                 else
                     symbol = symbol.toUpperCase();
             }
@@ -251,11 +285,16 @@ public class TestingPage extends Page {
 
             }
 
+            System.out.println(textPane.getVvalue());
+            //scrollField.setText(Double.toString(textPane.getVvalue()));
+
             posSymbol++;
 
             if (lines.get(posLine).length() == posSymbol) {
                 posSymbol = 0;
                 posLine++;
+                //textPane.setVvalue(0.19291 * posLine);
+                textPane.setVvalue(textPane.getVvalue() + scrollCoefficient);
             }
 
             if (posLine != lines.size()) {
@@ -285,6 +324,7 @@ public class TestingPage extends Page {
                     if (posLine != 0) {
                         posLine--;
                         posSymbol = lines.get(posLine).getCount() - 1;
+                        textPane.setVvalue(textPane.getVvalue() - scrollCoefficient);
                     }
                 } else
                     posSymbol--;
