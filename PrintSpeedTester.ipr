@@ -33,11 +33,11 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.iml" group="PrintSpeedTester" />
+      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.main.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester.test.iml" filepath="$PROJECT_DIR$/PrintSpeedTester.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester_main.iml" filepath="$PROJECT_DIR$/PrintSpeedTester_main.iml" group="PrintSpeedTester" />
-      <module fileurl="file://$PROJECT_DIR$/PrintSpeedTester_test.iml" filepath="$PROJECT_DIR$/PrintSpeedTester_test.iml" group="PrintSpeedTester" />
+      <module fileurl="file://$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.main.iml" filepath="$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.test.iml" filepath="$PROJECT_DIR$/ua.lyohha.PrintSpeedTester.test.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
@@ -58,6 +58,11 @@
       <option name="id" value="MavenRepo" />
       <option name="name" value="MavenRepo" />
       <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="BintrayJCenter" />
+      <option name="name" value="BintrayJCenter" />
+      <option name="url" value="https://jcenter.bintray.com/" />
     </remote-repository>
   </component>
   <component name="VcsDirectoryMappings">

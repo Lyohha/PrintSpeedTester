@@ -54,5 +54,14 @@
         <!--<HBox>
             <Label fx:id="scrollField" text="0"/>
         </HBox>-->
+        <HBox>
+            <Button fx:id="menuButton" text="Back to menu" styleClass="open-button" prefWidth="300" onAction="#exitButtonClick">
+                <VBox.margin>
+                    <Insets>
+                        <top>5</top>
+                    </Insets>
+                </VBox.margin>
+            </Button>
+        </HBox>
     </VBox>
 </GridPane>

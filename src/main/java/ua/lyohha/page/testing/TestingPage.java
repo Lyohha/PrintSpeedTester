@@ -1,9 +1,11 @@
 package ua.lyohha.page.testing;
 
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -35,6 +37,7 @@ public class TestingPage extends Page {
     public Label wpmField;
     public CheckBox ignoreErrorCB;
     public Label scrollField;
+    public Button menuButton;
 
     private String styleFile = "/assets/styles/testing.css";
     private String page = "/assets/page/TestingPage.fxml";
@@ -348,6 +351,11 @@ public class TestingPage extends Page {
         float perMin = perSec * 60;
 
         return (int) perMin;
+    }
+
+    public void exitButtonClick(ActionEvent actionEvent) {
+        this.navigation.navigateBack();
+
     }
 
     class Timer implements Runnable {
